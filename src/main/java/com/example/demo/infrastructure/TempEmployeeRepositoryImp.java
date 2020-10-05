@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.example.demo.infrastructure;
 
 import java.util.ArrayList;

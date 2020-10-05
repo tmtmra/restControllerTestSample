@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.example.demo.usecase;
 
 import java.util.Optional;

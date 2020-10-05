@@ -17,11 +17,11 @@ class EmployeeControllerSliceAndImportTest {
     @Autowired
     private MockMvc mvc;
     @Test
-    void testGetOne() throws Exception {
+    void test() throws Exception {
         //実行
         this.mvc.perform(get("/employees/{employeeId}", "123")) //
         //確認
         .andExpect(status().is(200)) //
-        .andExpect(content().json("{\"employeeId\":\"123\",\"name\":\"Taro\"}")); //DBのデータ
+        .andExpect(content().json("{\"employeeId\":\"123\",\"name\":\"Taro\"}")); //Repositoryから取得したデータ
     }
 }

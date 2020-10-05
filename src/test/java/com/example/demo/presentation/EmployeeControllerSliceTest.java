@@ -22,12 +22,12 @@ class EmployeeControllerSliceTest {
     @Autowired
     private MockMvc mvc;
     @Test
-    void testGetOne() throws Exception {
+    void test() throws Exception {
         //モックの動きを設定する
         when(this.mockedUsecase.getEmployee(anyString())).thenReturn(Optional.ofNullable(new Employee("foo", "bar")));
         //テストを実行
-        this.mvc.perform(get("/employees/{employeeId}", "123")) //
+        this.mvc.perform(get("/employees/{employeeId}", "123")) //idは何でもよい
         .andExpect(status().is(200)) //
-        .andExpect(content().json("{\"employeeId\":\"foo\",\"name\":\"bar\"}")); //モックのデータ
+        .andExpect(content().json("{\"employeeId\":\"foo\",\"name\":\"bar\"}")); //クエリに関係なくモックのデータ
     }
 }

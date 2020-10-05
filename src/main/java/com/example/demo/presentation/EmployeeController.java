@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.example.demo.presentation;
 
 import java.util.Optional;
